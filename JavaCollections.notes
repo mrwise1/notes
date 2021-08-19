@@ -1,0 +1,363 @@
+-----------------------------------------------------------
+    Java Collections Framework
+-----------------------------------------------------------
+
+--- 1) What is Collection and Collections? ---
+
+	- Collection: It is an interface. Collection is the interface where you group objects into a single unit.
+	- Collections: It is an utility class.  Collections is a utility class that has some set of operations you perform on Collection. All methods are static
+
+	# Both are part of the Java Collections Framewok.
+	# Both are present in Java.util.package
+
+--- 2) Limitations of Array ---
+	# Array
+	- Can store only homegenious data.
+	- But we can overcome this issue by creating Object Array.
+
+	*Limitations*
+
+		1) Size is fixed
+		2) Only homegenious Data can be stored. (Except Object)
+		3) There is no underlaying dataStructure. No Ready Made Methods
+	- To overcome this problem we are using Collections Framework	
+
+--- 3) Collections Framework
+
+		1) Size is not Fixed.
+		2) Hemogenious Data & Heterogenious Data
+		3) Impelemented Data Structure - Ready Made Methods
+
+--- 4) WHat is Collection Interface? ---
+
+	- Collection is a Root Interface.
+
+	- Collections it is Class inside of java.util package. It consists some methods. We can use those method on Collection objects
+
+
+		. Collection (I)
+			. List(I)
+			. Set(I)
+			. Queee(I)
+
+--- 5) What is List(I)? ---
+
+	1) It is a chain interface of Collection Interface
+	2) Insertion order is preserved.
+	3) Dublicates are allowed
+
+		. List (I)
+
+			1) ArrayList (Class)
+			2) Linked List (Class)
+			3) Vector (Class) <---  Stack (Class) 
+
+--- 6) WHat is Set (I)? ---
+	
+	1) It is a chain interface of Collection Interface
+	2) Insertion order is not preserved
+	3) Dublicates Not allowed
+		
+		. Set (I)
+
+			1) HashSet (Class)
+			2) LinkedHashSet (Class)
+
+--- 7) What is Queue (I)? ---
+
+	1) It is a chain interface of Collection Interface
+	2) Prior to process --> FIFO (First In First Out)
+	
+		. Queue (I)
+			1) Priority Queee
+
+--- 8) What is Map (I) Interface? ---
+
+	- Not Chain Interface of Collection (I)
+	- Objects are stored as <Key> and <Value>
+	- <Key> are unique dublicates are not allowed.
+	- <Values> can be dublicated.
+
+		. Map (I)
+			1) HashMap (Class)
+			2) LinkedHashMap (Class)
+			3) HasTable (Class)
+
+--- 9) What are the methods available in Collection (I) ? ---
+	
+	--- Methods from Collection Interface
+	1) add(Object o) --> add one object
+	2) addAll( Collection C  ) --> add multiple Objects
+	3) remove (Object o) --> Remove one object
+	4) removeAll (Collection can) --> Remove all object from Collection
+	5) retainAll (Collection C) --> keeping group of objects only 
+	6) toArray(Collection C) --> return: Object[] []
+
+	7) clear() --> Clear all objects 
+	8) isEmpty() 
+	9) Size()
+	10) Contains(Object o)
+	
+
+--- 10) What is List Methods? ---
+
+	1) add(index, object c) --> inserting an object at specific location
+	2) addAll(index, Collection c)
+	3) remove(index) 
+	4) get(index) 
+	5) set(index, object)
+
+--- 11) What is ArrayList? ---
+
+	- ArrayList<Object> al = new ArrayList<>();
+
+	- Methods:
+		. add(obj) --> add at the end of the ArrayList
+		. add(index, obj) --> add specific location
+		. size()
+		. remove(index)
+		. get(index)
+		. set(index, obj)
+		. contains(obj) --> return boolean
+		. isEmpty() --> return boolean
+		. addAll( Collection C)
+		. removeAll( Collection C)
+		. ----------  Collections Class Methods
+		. Collections.sort(ArrayListName) 
+		. Collections.sort(ArrayListName, Collections.reverseOrder())
+		. Collections.shuffle(ArrayListName)
+
+--- 12) Iterator ---
+
+	- Iterator interface
+	
+	[java]
+	Iterator it = al.Iterator();
+	while(it.hasNext()){
+		System.out.println(it.next());
+	}
+	[/java]
+
+--- 13) LinkedList ---
+
+	- List (I)                  - Quee (I)
+		. LinkedList(Class)	<---	. Deque (I)
+
+	# ArrayList
+	- Retriving operations
+
+	# Linked List 
+	- Insertion / Deletion
+
+	- Most of the time LinkedList used with Stack and Quees
+
+		# Stack
+		. First In Last Out (FILO)
+		# Quees
+		. First in First Out (FIFO)	
+
+	# ArrayList
+		- Retriving operations is easy
+		- Dublicates
+		- Insertion order
+		- Null
+		- There is no internal linked between elements.
+
+	# LinkedList
+		- Insertion/ Deletion is easy
+		- Dublicates
+		- Insertion order
+		- Null
+		- There is internal link between elements
+			. Elements called as Node
+			. Each node has 3 parts
+				|Pre|Element|After|		
+
+	- Linked_List_Methods:
+
+	1) add(x)
+	2) add(index, obj)
+	3) addAll(Collection C)
+	4) remove(obj)
+	5) remove (index)
+	6) removeAll(Collection C)
+	7) LinkedList.get(index)
+	8) LinkedList.set(index, object)
+	9) Collections.sort()
+	10) Collections.shuffle()
+	
+	-----
+
+	11) addFirst(object) --> adding object as a first element
+	12) addLast(object) 
+	13) removeFirst(object)
+	14) removeLast(object)
+
+--- 14) What is Set (I)?
+
+	- Set (I)
+		. HashSet (Class)
+		. LinkedHashSet (Class)
+
+--- 15) What is HashSet? ---
+
+	1) Dublicates are not allowed
+	2) Insertion order is not preserved
+	3) HashCode concept (Searching elements will be very fast)
+	4) Heterogenious data supported
+	5) Null is allowed
+
+	# underlaying dataStructure is HashTable
+	
+	# If you are going to use search operations you can use HashSet
+
+	[java]
+			HashSet hs = new HashSet();
+			// By default it will allocate 16 elements.
+			// Load Factor(Fill Ratio) == .75
+	[\java]	
+	
+		# ArrayList default object is 10. Everytime once we try to add/delete an element to/from ArrayList it is interally creating a new ArrayList and copying elements. Old arrayList collected by Garbage Collector.
+		# HashSet as soon as 75 percent of it occupied it will create a new HashSet and elements copied to new one.
+
+		#  You can configure HashSet's intial size and load Factor
+			[java]
+				HashSet hs = new HashSet(100, 0.95);
+			[\java]]	
+		
+	- Methods:
+
+		1) add(object)
+		2) addAll(Collections c)
+		3) remove(value)
+		4) removeAll(Collection C)
+		5) contains(object)
+		6) containsAll(Collection C)
+		7) isEmpty()
+		# In Order to Use Collections.sort Methods we have to conver HashSet to ArrayList
+		
+
+--- 16) What is LinkedHashSet?  ---
+
+		1) Dublicates are not allowed
+		2) Insertion order is preserved
+
+	# underlaying data structure is HasTable + LinkedList
+	# Initial size is 16 load factor is 0.75.
+
+--- 17) What is Queue? ---
+
+	- FIFO 
+
+	- Queue (I)
+			. Deque (I)
+			. BlockingQueue (I)
+			. BlockingDeQueue (I)
+		. PriorityQueue (Class)	
+		. LinkedList (Class)
+	- If you want to represent Prior to present Elements you can use Queue
+
+	-  Queue(I)
+
+		# LinkedList vs PriorityQueue
+
+			. Both Insertion Order i preserved
+			. Dublicates are allowed.
+			. Only homegenious data allowed in PriorityQueue
+			. Both home and heto data allowed in LinkedList
+	- Methods:
+		1) add() --> boolean value. If it is successfull return true otherwise exception
+		2) offer() --> use for adding values. boolean value. successfull return true. otherwise return false.	
+		3) element() --> return head(first) element. return exception if Queue is isEmpty.
+		4) peek() --> return head(first) element. return Null if Queue is isEmpty
+		5) remove() --> return  head element and remove. if Queue is isEmpty return exception.
+		6) poll()	--> return head element and remove. If Queue isEmpty return Null.
+
+--- 18) What is Map? ---
+
+	- Map (I)
+		. HasMap(Class)
+		. HasTable(Class)
+	- Key and Value format.	
+	- {Key, Value} --> Entry
+	- Every key is unique
+
+	- Map (I)
+
+		. HashMap (Class)
+		. HasTable (Class)
+
+--- 19) WHat is HashMap? ---
+
+	1) underlaying dataStructure is HasTable.
+	2) Insertion order is not preserved.
+	3) Dublicate Keys are not allowed
+	4) Dublicate values are allowed
+	4) Null Key allowed once.
+
+	- Methods:
+
+		1) m.put(key, valaue)
+		2) m.putAll(Map a)
+		3) m.get(Key) --> return valaue
+		4) m.remove(Key) 
+		5) m.containsKey(Key) --> return boolean
+		6) m.containsValaue(Value) --> return boolean
+		7) m.isEmpty() --> return boolean
+		8) m.size()
+		9) m.clear()
+
+		------
+
+		10) m.KeySet() --> return all the keys as Set Object 
+		11) m.Values() --> return type will be Collection
+		12) m.entrySet() --> all entry will be return as Set
+			a) e.getKey(101)
+			b) e.getValue(X)
+			c) e.setValue(Object)
+
+--- 20) WHat is HashTable? ---
+
+	- Map
+		. HashMap
+		. HashTable
+
+	# Similarities HashMap and HashTable
+		1) Key Value
+		2) Underlaying ds HashCode
+	
+	# Difference HashMap and HashTable
+		1) HashTable is synchronized however HasMap is not.
+			# Synchronized only one thread allowed at a time and thread Safe
+		2) HashTable performance is slow but HashMap is faster
+		3) HasTable null key is not accepted but in HashMap Null accepted.
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1208 @@
+-----------------------------------------------------------
+    Manual Testing
+-----------------------------------------------------------
+
+
+
+Titles:
+--- Module 1: Testing concepts(Theory) What?
+--- Module 2: Testing Project(Practical) How?
+--- Module 3: Agile process - Jira
+
+
+-----------------------------------------------------------
+a) Module 1 - Software Testing Concepts
+-----------------------------------------------------------
+
+--- 1) What is Software? ---
+
+	- Definition:
+	- A software is a collection of cumputer programs that helps us to perform a task.
+
+	- Types of Software:
+ 
+ 	a) System Software 
+		. Ex: Device Drivers, Operating Systems, Servers, Utilities, etc
+
+ 	b) Programming Software 
+		. Ex: Compilers, Debuggers, Interfaces etc.
+
+ 	c) Application software
+		. Ex: Web Applications, Mobile Apps, Desktop Applications etc.
+
+--- 2) What is Software Testing? ---
+
+	X Bank(Company) --> IT Company --> Develop --> Test --> Deliver --> X Bank  
+
+	- Software Testing is a part of software development process.
+	- Software Testing is an activity to detect and identify the defects in the software.
+	- The objective of testing is to release *quality product* to the client.
+
+--- 3) What is Software Quality? ---
+
+	- Bug-free.
+	- Delivered on time.
+	- Within budget.
+	- Meets requrements and/or expectations of customer.
+	- Maintainable.
+
+--- 4) What is project and product? ---
+
+	- If software application is developed for specific customer based on the reqirements then it is called Project.
+	- If software application is developed for multiple customers based on market reqirements then it is called Product.
+
+--- 5) Why do we need Testing? ---
+
+	- To make sure we deliver *quality product* to the customer which is:
+		. Bug-free
+		. Meets requirements and expectations of the customer.
+
+--- 6) Error, Bug/Defect  & Failure ---
+
+ 	1) Error: is bacically a human mistake. It is identified by developers
+ 	2) BugDefect: deviation between the expected result and actual result. It is identified by Testers.
+ 	3) Failure: deviation identified by the end user. It is identified by end-users.
+
+--- 7) Why Software has bugs? ---
+
+	- There are mainly # 5 reasons #;
+	
+		1) Miscomminication or no communication.
+		2) Software complexity
+		3) Programming errors.
+		4) Changing requirementse
+		5) Lack of skilled Testers
+
+--- 8) What is SDLC? ---
+
+	# Software Development Life Cycle #
+
+	- Software Development Life Cycle is a process used by software industry to design, develop and test software's.
+
+	# Pillars of a Company #
+	. P - People
+	. P - Process
+	. P - Product
+
+	- Link: https://ibb.co/2YyZnqV
+
+		1) *Requirement Analysis*: It is customer requirements. Outcome of this step will be requirements specification document.
+			2) Design: Input is Reqirement specifiction document. Outcome is design.
+				3) Development: Based on design developers will develop the software
+					4) Testing: Based on code Testers will perform test.
+						5) Deployment:	
+							6) Maintenance: 
+
+--- 9) What is Waterfall Model? ---
+
+	- Link: https://ibb.co/YQC6pJx
+
+		. Requirement Analysis
+			. System Design
+				. Implementation
+					. Testing
+						. Deployment
+							. Maintenance
+
+	- Documentation is very important!
+	- Each phase depends on previous phase
+
+	# Advantages of WaterFall Model #
+
+		1) Quality of the product will be good because of the detailed documentation.
+		2) Since Requirement changes are not allowed, changes of finding bugs will be less.
+		3) Initial investment will be less since the tester will be hired at later stages.
+		4) Preferred for small projects where reuirements are freezed.
+
+	# Disadvantages of WaterFall Model #
+
+		1) Requirement changes are not allowed.
+		2) If there is defect in Requirement that will be continued in later phases.
+		3) Total investment is more, because time taking for re-work on defect is time consuming which leads to high investment.
+		4) Testing will start only after coding
+	  
+--- 10) What is Spiral Model? ---
+
+	- Link: https://ibb.co/m9jR2Kh
+	
+	- Spiral Model is *iterative* model.
+	- Spiral Model overcome drawbacks of Waterfall Model.
+	- We follow Spiral Model whenever there is dependency on the modules.
+	- In every cycle new software will be released to customer.
+	- Software will be released in multiple versions. So it is also called version control model.
+
+
+	# Advantages of Spiral Model #
+
+		1) Testing is done in every cycle, before going to the next cycle.
+		2) Customer will get to use the software for every module. No need to wait.
+		3) Requirement changes are allowed after every cycle before going to the new cycle.
+	
+	# Disadvantages of Spiral Model #
+
+		1) Requirement changes are not allowed in between the cycle.
+		2) Every cycle of Spiral Model looks like WaterFall Model.
+		3) There is not testing in requirement and design phase.
+
+--- 11) What is V-Model? ---
+
+	- Link: https://ibb.co/1dyBGjq
+
+	# Verification # 													#Validation#
+
+	- BRS(Business Requirement Specifiction)
+	- CRS (Customer Requirement Specifiction) --> All Same.  --> *User Acceptance Testing* will conduct based on this document.  - Business Team 
+	- URS (User Requirement Specifiction)
+
+		- SRS (Software Requirement Specifiction): Based on BRS SRS will be prepared. --> System Testting will be conducted.     - Black Box Testing
+
+			- HLD (Contains High Modules) 
+												---> Integration Testing
+			- LLD (Contains Low Modules) 									--> White Box Testing: Testing conducted by Developers. 
+
+					- Coding    ---> Unit Testing
+
+
+	# Advantages of V-Model  #
+		. testing is involved in each and every phase.
+	# Disadvantages of V-Model  #
+		. Documentation is more.
+		. Initial investment is more.
+
+--- 12) What is Static & Dynamic Testing? ---
+	*Static Testing*
+		- Testing the software related documents is called as Static Testing
+		a) Review
+		b) Walkthrough
+		c) Inspection
+
+	*Dynamic Testing*
+		- Testing the actual software.
+		a) Unit Testing
+		b) Integration Testing
+		c) System Testing
+		d) User Acceptance Testing
+
+--- 13) What is Verification and Validation? ---
+	- !Verification:
+	- Verification checks whether we are building the *right product*.
+	- Focus on Documentation
+	- Verification typically involves Static Testing techniques:
+		a) Review
+		b) Walkthrough
+		c) Inspection
+	- !Validation:
+	- Validation checks whether we are building *product right*.
+	- Takes place after Verifications are completed.
+	- Focus on Software.
+	- Validation typically involves actual testing # Dynamic Testing # techniques:
+		a) Unit Testing
+		b) Integration Testing
+		c) System Testing
+		d) User Acceptance Testing
+
+--- 14) What is White Box and Black Box Testing? ---
+
+	*White Box Testing*
+	- We have to know code itself.
+	- Testing internal logic of the code
+	- That is why typically developers can perform.
+		1) Unit Testing: Developers will test the code
+		2) Integration Testing: Developers will integrate multiple modules. They check data flow between those components.
+
+	* Black Box Testing*
+	- We do not need to know code.
+	- Functionality Testing
+	- Testers perform Black Box Testing
+	 	1) System Testing: Testing whenever software performing according to the customer requirements.
+		2) User Acceptance Testing: Testers along with end-users.
+
+--- 15) What is Review, Walkthrough, Inspection?---
+
+	*Review*
+		. Conducts on documents to ensure correctness and completeness
+		a) Requirement Reviews
+		b) Design Reviews
+		c) Code Reviews
+		d) Test Plan Reviews
+		e) Test Cases Reviews
+
+	*Walkthrough*
+		. It is an informal review. 
+		. Author reads the documents or code and discuss with peers.
+		. It's not pre-planned and can be done whenever required.
+
+	*Inspection*
+		. It is a most formal review type.
+		. In which at least 3-8 people will sti in the meeting 
+			1. Reader
+			2. Writer
+			3. Moderator
+		. Inspection will have a proper schedule which will be intimated via email to the concerned developer/tester.	
+
+--- 16) What is QA & QC & QE? ---
+
+	#QA vs QC #
+	- Definition:
+		- QA (Quality Assurance)
+			. It is Process related.
+			. Focuses on building in quality.
+			. It is preventing defects
+			
+		- QC (Quality Control)
+			. It is actual Testing of the Software. Just involce Testing Part of SDLC
+			. Focuses on Testing for quality.
+			. It is detecting defects
+
+		- Pillars of the Company:
+			. P - People ---> QC(Testers)
+			. P - Process --> QA --> Involve every stages of the SDLC
+			. P - Product	 
+
+		# QE (Quality Engineering) #
+		- Automation engineers
+
+--- 17) What is Levels of Testing? ---
+
+	a) Unit Testing
+	b) Integration Testing
+	c) System Testing  					
+	d) User Acceptance Testing (UAT)	
+
+	1) Unit Testing
+
+	- A unit is a single component or module of a software.
+	- Unit Testing conducts on single program or single module.
+	- Unit Testing is White Box Testing technique.
+	- Unit Testing is conducted by developers.
+	- Unit Testing techniques:
+		. Basis path Testing
+		. Control Structure Testing
+			. Conditional Coverage
+			. Loops Coverage
+		. Mutation Testing
+
+	2) Integration Testing
+
+	- Integration Testing performed between 2 or more modules
+	- Integration Testing Focuses on checking data communication between multiple modules.
+	- Integration Testing is White Box Testing techniques.
+	
+	# Types Of Integration Testing #
+
+	i) Incremental Integration Testing
+		- Incrementally adding the modules and testing the data flow between the modules.
+
+		- There are 2 apporoaches:
+
+			a) Top_Down: the module added is child of previous module.
+			b) Bottom_Up: the module added is parent of previous module.
+			c) Hybrid: Combination of Top_Down and Bottom_Up apporoaches.
+
+	ii) Non-Incremental Integration Testing	
+		- Adding all the modules in a single shot and test data flow between modules.
+
+		- Drabacks:
+			a) We might miss data flow between some of the modules.
+			b) If you find any defect we can't understand the root cause of defect.
+
+	3) System Testing
+
+	- Testing over all Functionality of the application with respective client requirements.
+	- It is a Black Box Testing technique.
+	- This testing is conducted by testing Team.
+	- After completion of component and Integration level testing's we start System Testing.
+	- Before conducting System Testing we should know the customer requirements.
+	- System Testing Focuses on below aspects:
+		a) Graphical User Interface Testing(GUI)
+		b) Functional Testing
+		c) Non-functional Testing
+		d) Usability Testing
+
+	4) User Acceptance Testing UAT
+	
+	- After completion of System Testing UAT Team conducts Acceptance testing in two Levels
+		i)  Alpha Testing
+		ii) Beta Testing
+	- After completion of UAT testing application goes to production environment.
+
+--- 18) What is System Testing? ---
+
+	- Link: https://ibb.co/fkRMyKw
+
+	- System Testing:
+		i) GUI Testing
+		ii) Usability Testing
+		iii) Functional Testing
+		iiii) Non-Functional Testing
+
+	1) GUI Testing
+		
+		- Graphical User Interface Testing or GUI testing is a process of testing the user interface of an application.
+		- A Graphical User Interface includes all the elements such as menus, checkbox, buttons, colors, fonts, sizes, icons, content, and images.
+
+		- Link:https://ibb.co/P6GHP1G
+		
+	# GUI Testing Checklist: #
+		- Testing the size, position, width, height of the elements.
+		- Testing of the error messages that are getting displayed.
+		- Testing the different sections of the screen.
+		- Testing of the font whether it is readable or not.
+		- Testing of the screen in different resolutions with the help of zooming in and zooming out.
+		- Testing the alignment of the texts and other elements like icons, buttons, etc. are in proper place or not.
+		- Testing the colors of the fonts.
+		- Testing whether the image has good clarity or not.
+		- Testing the alignment of the images.
+		- Testing of the spelling.
+		- The user must not get frustrated while using the system interface.
+		- Testing whether the interface is attractive or not.
+		- Testing of the scrollbars according to the size of the page if any.
+		- Testing of the disabled fields if any.
+		- Testing of the size of the images.
+		- Testing of the headings whether it is properly aligned or not.
+		- Testing of the color of the hyperlink.
+		- Testing UI Elements like button, textbox, text area, check box, radio buttons, drop downs ,links etc.
+
+	2) Usability Testing (Easiness of the Application)
+
+		- During this testing validates application provided context sensitive help to the user or not.	
+		- Checks how easily the end users are able to understand and operate the application is called Usability testing.
+
+	3) Functional Testing
+		
+		- Functionality is nothing but behavior of application.
+		- Functional testing talks about how your feature should work.
+
+		- Functional Testing:
+			i) Object Properties Testing
+			ii) Database Testing
+			iii) Error Handling
+			iiii) Calculations/Manipulations Testing
+			iiiii) Links Existence & Links Execution
+			iiiiii) Cookies & Sessions
+		
+		a) Object Properties Testing
+			- Check the Properties of objects present on the Application.
+			- Ex: Enable, disable, visible, Focus.....
+
+		b) Database Testing/Backend Testing
+			- DML OPerations (Data Manipulations Language)
+				- Insert
+				- Update
+				- Delete
+				- Select
+			# Grey Box Testing: Combinating of Black and White Box Testing #
+				- Table level Validations (Column Type, Column Length, number of columns)
+				- Relation between the Tables (Normalization)
+				- Functions
+				- Procedures
+				- Triggers
+				- Indexes
+				- Views
+
+		c) Error Handling
+			- Tester verify the error messages while performing incorrect actions on the application.
+			- Error messages should be readable.
+			- User understandle/Simple Language.
+
+		d) Calculations/Manipulations Testing
+			- Tester should verify the Calculations.
+
+		e) Links Existence & Links Execution
+			- Where exactly the links are placed 
+			- Links are navigating to proper page or not 
+			- There are 3 types of links:
+				i) Internal Links
+				ii) External Links
+				iii) Broken Links
+					
+			- Link Execution --> Is links color changing after clicking?
+
+		f) Cookies & Sessions
+			# What is Cookies? #
+			- Cookies are temporary files created by Browser while browsing the pages through Internet.
+
+			# What is Sessions? #
+			- Sessions are time slots created by the Server.
+			- Sessions will be expired after some time if you are idle for some time.
+
+	4) Non-Functional Testing
+		
+			- Once the application Functionality is stable then we do Non-Functional testing.
+			- Focus on Perfomance, load it can take and security etc.
+
+			a) Perfomance Testing: Speed of the Application
+				i) Load Testing
+				ii) Stress Testing
+				iii) Volume Testing
+			b) Security Testing
+			c) Recovery Testing
+			d) Compatibility Testing
+			e) Configuation Testing
+			f) Installation Testing
+			g) Sanitation/Garbage Testing
+		
+			
+			a) Perfomance Testing 
+				. Speed of the Application
+
+				i) Load Testing
+					. Increasing the load on the application slowly then check the speed of the application.
+				ii) Stress Testing
+					. Suddenly increase/decrease the load on the application and check speed of the application.
+				iii) Volume Testing
+					. How much data is able to handle by the application.
+
+			b) Security Testing
+				- How secure our application.
+				- !Authentication --> Users are valid or not?
+				- !Authorization/Access Control --> Permissions of the valid user.
+
+			c) Recovery Testing: 
+				- Checks the system change to abnormal to normal.
+
+			d) Compatibility Testing
+				- Forward Compatibility
+				- Backward Compatibility
+				- Hardware Compatibility - Configuation Testing	
+
+			e) Installation Testing
+				- Check screens are clear to understand.
+				- Simple or not
+				- Un-installation
+			g) Sanitation/Garbage Testing
+				- If any application provides extra features/Functionality then we consider them as bug.	
+
+		# Functional Testing vs Non-Functional Testing
+
+		- Links: https://ibb.co/w4j2hTs
+
+		* Functional Testing *										|	      # Non-Functional Testing #
+	- Validates Functionality of software  		   				    |  - Verify the performance, security reliability of the software
+	- Functionality describes what software does					|  - Non-Functionality describes how software works
+	- Concentrates on user requirement              				|  - Concentrates on user expectations.
+	- Functional Testing takes pplace before Non-Functional Testing |  - Non-Functional Testing performed after finishing Functional Testing.
+
+--- 19) What is Regression Testing? ---	
+
+	- Testing conducts on modified build to make sure there will not be impact on existing Functionality because of changes like adding/deleting/modifying features.
+	- There 3 types of Regression Testing:
+		
+		1) Unit Regression Testing
+			- Testing only the changes/modifications done by developer
+
+		2) Regional Regression Testing
+			- Testing the modified module along with the impacted modules
+			- *Impact Analysis Meeting* conducts to identify impacted modules with QA & DEV.
+
+		3) Full Regression Testing
+			- Testing the main feature & remaining part of the application.
+			- Ex: Dev has done changes in my modules, instead of identifying impacted modules, we perform one round of full Regression.	
+
+--- 20) What is Re-Testing? ---
+
+	- whenever the developer fixed a bug, tester will test the bug fix is called Re-Testing.
+	- Tester close the bug if it worked otherwise re-open and send to developer.
+	- To ensure that the defects which were found and posted in the earlier build were fixed or not in the current build.
+
+	- Ex:
+		. Build 1.0 was released. Test team found some defects (Defect Id 1.0.1, 1.0.2) and posted. 
+		. Build 1.1 was released, now testing the defects 1.0.1 and 1.0.2 in this build is retesting
+
+	# Example: Re-Testing vs Regression Testing #
+
+	- Link: https://ibb.co/Y8n6xmN 
+
+	Admin --> Purchase ---> Finance
+
+	- An Application Under Test has 3 modules namely Admin, Purchase, Finance.
+	- Finance module depends on Purchase module.
+	- If a tester found a bug on Purchase module and posted. Once the bug is fixed, the tester needs to do Retesting to verify whether the bug related to the Purchase is fixed or not also tester needs to do Regression Testing to test the FInance module which depends on the Purchase module.
+
+--- 21) What is Smoke and Sanity Testing? ---
+
+	- Smoke and Sanity Testing come into picture after build release.
+
+	- Links: https://ibb.co/PCKBM0H
+	 
+	# Smoke Testing #
+
+	- Smoke Test is done to make sure that the build we received from the development team is testable/stable or not.
+	- Smoke Testing is performed by both Developers and Testers
+	- Smoke Testing, build may be either stable or unstable.
+	- It is done on Initial builds.
+	- It is a part of bacis Testing.
+	- Usually it is done every time there is a new build release.
+
+	# Sanity Testing #
+
+	- Sanity Testing is done during the relase phase to check for main Functionalities of the application without go deeper.
+	- Sanity Testing is performed by Testers alone.
+	- Sanity Testing build is relatively stable.
+	- It is done on stable builds.
+	- It is a part of Regression Testing.
+	- It is planned when there is no enough time to do in-depth testing. 
+
+	- Link: https://ibb.co/hVGfNHT
+
+--- 22) What is Exploratory Testing? ---
+
+	- We have to explore the application, understand completely and test it.
+	- Understand the application, identify all possible scenarios, document it then use it for testing.
+	- We do Exploratory Testing when the Application ready but there is no requirement.
+	- Test Engineer will do Exploratory Testing when there is no requirement.
+
+	# Drawbacks #
+		- You might misunderstand any feature as a bug (or) any bug as a feature since you do not have requirements.
+		- Time consuming.
+		- If there is any bug in application, you will never know about it.
+
+--- 23) What is Adhoc Testing? ---
+
+	- Testing application randomly without any test cases or any Business Requirement Document.
+	- Adhoc Testing is an informal testing type with an aim to break the sytem.
+	- Tester should have knowledge of the application even though he does not have requirements/test cases.
+	- This testing is Usually an unplanned activity.
+
+	* Ac Hoc Testing *
+		. No Documentation
+			. No Test Design
+				. No Test Case
+
+--- 24) What is Monkey/Gorilla Testing? ---
+
+	- Testing application randomly without any test cases or any Business Requirement Document.
+	- Adhoc Testing is an informal testing type with an aim to break the system.
+	- Tester do not have knowledge of application.
+	- Suitable for gaming Applications.
+
+	- Links: https://ibb.co/5L4n2vq
+
+--- 25) What is Positive Testing? ---
+
+	- Testing the application with *valid inputs* is called as Positive Testing.
+	- It checks whether an application behaves as expected with the negative inputs.
+	
+	- Ex: 
+		. There is a text box in an application which can accept only numbers. Entering values up to 99999 will be acceptable by the system and any other values apart from this should not be acceptable.
+		. To do positive testing set the valid input values from 0 to 999999 and check whether the system is accepting the values.
+
+--- 26) What is Negative Testing? ---
+
+	- Testing the application with invalid inputs is called as Negative Testing.
+	- It checks whether an application behaves as expected with the negative Inputs.
+	
+	- Ex:
+		. Negative testing can be performed by entering characters A to Z or a to z. 
+		. Either Software system should not accept the values or else it sould throw an error message for these invalid data inputs.
+
+		- Links: https://ibb.co/2ZShp78
+
+--- 27) What is End-To-End Testing? ---
+	
+	- Testing the overall Functionalities of the system including the data Integration among all the modules is called end-to-end testing.
+
+	- Ex:
+		Login --> Add Customer --> Delete/Edit Customer --> Logout
+
+	# End to end Test
+	
+	1) Login 
+	2) Add New Customer
+	3) Edit Customer
+	4) Delete Customer
+	5) Logout
+
+	- Links: https://ibb.co/Qk26JhC
+
+--- 28) What is Globalozation and Localization Testing? ---
+
+	# Globalozation Testing
+	- Performed to ensure the system or software application can run in *any cultural or local environment*.
+	- Different aspects of the software application are tested to ensure that it supports every language and different attributes.
+	- It tests the different currency formats, mobile number formats and address formats are supported by the application/
+	- For example, Facebook.com supports many languages and it can be accessed by people of different countries. Hence it is a globalized product.
+
+	# Localization Testing
+	- Performed to check system or software application for a *specific geographical and cultural*.
+	- Localized product only supports the specific kind of language and is usable only in specific region.
+	- It testes the specific currency format, mobile number format and address format is working properly or not.
+	- Ex: Baidu.cim supports only the Chinese Language and can be accessed only by people of few countries. Hence it is a Localized Product.	
+	
+--- 29) What is Test Design Techniques? ---
+
+	- Test design techniques helps to *design better cases*.
+	- *Reduce the number of test cases* to be executed.
+	
+	- There are 5 types of techniques.
+		1) Equivalence Class Partitioning
+		2) Boundary Value Analysis (BVA)
+		3) Decision Table Testing
+		4) State Transition
+		5) Error Guessing
+
+	1) Equivalence Class Partitioning (ECP)
+		
+		- Partition data into various classes and we can select data according to class then test.
+		- It reduce the number of test-cases and saves time for testing.
+
+		- Links: https://ibb.co/n8Lwdx5, https://ibb.co/8975yhL	
+
+	2) Boundary Value Analysis (BVA)
+
+		- BVA technique used to check Boundaries of the input.
+		- Links: https://ibb.co/6FXR1Hp 	
+	
+		# Input Domain Testing
+			- The value will be verified in the text box/input fields.
+			- We use ECP ^ BVA Techniques.
+
+	3) Decision Table
+
+		- If we have more number of conditions/actions then we use Decision Table.
+		
+		- Decision Table is also called as Cause-Effect Table.
+		- This technique will be used if we have more conditions and corresponding actions.
+		- In Decision table technique, we deal with combinations of inputs.
+		- To identify the test cases with decision table, we consider conditions and actions.
+
+		- Take an example of transferring money online to an account which is already added and approved.
+
+		- Here the *conditions* to transfer money are:
+			. Account alreadly approved
+			. OTP (One Time Password) matched
+			. Sufficient monet in the account
+
+		- And the *actions* performed are:
+			. Transfer money	
+			. Show a message as insufficient amount
+			. Block the transaction incase of suspicious transaction
+
+		- Links: https://ibb.co/jRVwShC
+		
+	4) State Transition		
+
+		- In State Transition Technique changes in input conditions change the state of the Appilication
+		- This testing technique allows tester to test the behaviour of an AUT.
+		- The tester can perform this action by entering various input conditions in a sequence.
+		- In State transition technique, the testing team provides positive as wll as negative input test values for evaluating the system behaviour.
+
+		- Ex: Take an example of login page of an application which locks the user name after three wrong attempts of password.
+
+		- Links: https://ibb.co/1QMBVSj
+
+	5) Error Guessing
+	
+		- Error Guessing is one of the testing techniques used to find bugs in a software application based on testers prior experience.
+		- In Error Guessing we do not follow any specific rules.
+		- It depends on Tester Analytical skills and experience.
+
+		- Some of the examples are:
+			- Submitting a form without entering values.
+			- Entering invalid values such as entering alphabets in the numeric field.
+
+--- 30) What is STLC (Software Testing Life Cycle)? ---
+
+	1) *Requirement Analysis*
+		2) *Test Planning*
+			3) *Test Design*
+				4) *Text Execution*
+					5) *DefectBug Reporting and Tracking*
+						6) *Test Closure*
+
+	- Links1: https://ibb.co/swBNRW4
+    
+	- Links2: https://ibb.co/DrkQJbp
+
+--- 31) What is Test Plan? ---
+
+	- A test plan is a document that describes the test scope, test strategy, objectives, schedule, deliverables and resources required to perform testing for a software product.
+
+	- *Test Plan Template Contents*:
+		. Overview
+		. Scope:
+			. Inclusions: (Features needs to tested)
+			. Test Environment
+			. Exclusions (Features no need to test)
+		. Test Strategy
+		. Defect Reporting Procedure
+		. Roles/Responsibilities
+		. Test Schedule
+		. Test Deliverables
+		. Pricing
+		. Entry and Exit Criteria
+		. Suspension and Resumption Criteria
+		. Tools
+		. Risk and Mitigations
+		. Approvals
+
+--- 32) What is Use Case, Test Scenario and Test Case?
+
+	- *Use Case*: (User Story):
+		. Use Case describes the requirement.
+		. Use Case Contains 3 items:
+			. *Actor*, which is the user, which can be a single person or a group of people, interacting with a process.
+			. *Action* which is to reach the final outcome.
+			. *GoalOutcome* which is the successful user outcome.
+
+	- *Test Scenario*:
+		. A possible area to be tested (What to test)
+
+	- *Test Case*:	
+		. Step by Step actions to be performed to validate Functionality of AUT (How to Test).
+		. Test case contains test steps, expected result & actual result.
+
+	- Links: https://ibb.co/s9CQ5vn
+
+	# Use Case vs Test Case #
+
+		- Use Case: Describes functional requirement, prepared by Business Analysis(BA)
+		- Test Case: Describes Test Steps/ Procedure, prepared by Test Engineer.
+
+	# Test Scenario vs Test Case #
+
+		- Test Scenario is "What to be tested" and Test Case is "How to be tested"
+		- Ex:
+			. Test Scenario: Checking the Functionality of Login Button
+				- TC1: Click the button without entering user name and password.
+				- TC2: Click the button only entering User Name.
+				- TC3: Click the button while entering wrong user name and wrong password.
+
+--- 33) What is Test Suite? ---
+
+	- Test Suite is group of test cases which belongs to same category.
+
+		- Link: https://ibb.co/wRg4fzL
+							
+--- 34) What is Test Case? ---
+
+	- A test Case i a set of actions executed to validate particular feature or functionality of your software application.
+
+	- # Test Case Contents #
+
+		. Test Case Id
+		. Test Case Title
+		. Description
+		. Pre-Condition
+		. Priority (P0, P1, P2, P3) - order
+		. Requirement ID
+		. Steps/actions
+		. Expected result
+		. Actual Result 
+		. Test Data
+
+	- Link: https://ibb.co/KVXy35w
+
+--- 35) What is Requirement Traceability Matrix(RTM)? ---
+
+	# What is RTM (Requirement Traceability Matrix)?
+
+	- RTM describes the mapping of Requirement's with the Text Cases.
+	- The main purpose of RTM is to see that all test cases are covered so that no Functionality should miss while doing Software Testing.
+	
+	- Requirement Traceability Matrix - Parameters include
+		- Requirement ID
+		- Requirement Description
+		- Test Case ID
+
+	- Links: https://ibb.co/nmS6N26
+
+--- 36) What is Test Environment? ---
+
+	- Test Environment is a platform specially build for test case execution on the software product.
+	- It is created by integrating the required software and hardware along with proper network Configuation.
+	- Test environment simulates production/ real time environment.
+	- Another name of test environment is *Test Bed*.	
+
+--- 37) What is Text Execution? ---
+
+	- During this phase test team will carry out the testing based on the test plans and the test cases prepared.
+
+	- Entry Criteria: Test Cases, Test Data & Test Plan
+	- Activities: 
+		- Test cases are executed based on the test planning.
+		- Status of test cases are marked, like Passed, Failed, Blocked, Run, and Others.
+		- Documentation of test results and log defects for Failed cases is done.
+		- All the Blocked and failed test cases are assigned bug ids.
+		- Retesting once the defects are fixed.
+		- Defects are tracked till closure.
+
+	- Deliverable:
+		- Provides defect and test case execution report with completed results.
+
+	# Guidelines For Test Execution #
+
+	- The build being deployed to the QA environment is the most important part of the test execution cycle.
+	- Test execution is done in Quality Assurance (QA) environment.
+	- Test execution happens in multiple cycles.
+	- Test Execution phase consists Executing the test cases + test scripts (if Automation)		
+
+--- 38) What is Defects/Gugs? ---
+
+	- Any mismatched Functionality found in an application is called Defect/Bug/Issue.
+	- During Test Execution Test engineers are reporting mismatches as defects to developers through templates or using tools.
+	- Defect Reporting Tools:
+		. Clear Quest
+		. DevTrack
+		. Jira
+		. Quality Center
+		. Bug Jilla etc.
+
+	# Defect Report COntents #
+	
+	. Defect_ID: Uniqure identification number for the defect.
+	. *Defect Description*: Detailed description of the defect including information about the module in which defect was found.
+	. Version: Version of the application in which defect was found.
+	. Steps: Detailed steps	along with screenshots with which developer can reproduce the defects.
+	. *Date Raised*: Data when the defect is raised.
+	. Reference: WHere you provide reference to the documents like requirements, design, architecture or may be even screenshots of the error to help understand the defect.
+	. *Detected By*: Name/ID of the tester who raised the defect.
+	. Status: Status of the defect, more on this later.
+	. FixedBy: Name/ID of the developer who fixed it.
+	. *Date CLosed*: Date when the defect is closed.
+	. Severity: Which Describes the impact of the defect on the application.
+	. Priority: Which is related to defect fixing urgency. Severity Priority could be High/Medium/Low based on the impact urgency at which the defect should be fixed respectively.
+
+--- 39) What is Severity? ---
+	
+	- Links: https://ibb.co/pn57C4Y
+
+	# Severity #
+
+		1) Blocker
+		2) Critical
+		3) Major
+		4) Minor 
+
+		- Severity describes the seriousness of defect and how impact on Business workflow.
+		- Defect severity can be catergorized into 4 class.
+
+			1) Blocker(Show Stopper): This defect indicates nothing can proceed furher.
+				- Ex: Application Crashed, Login Not Worked.
+
+			2) Critical: The main/basic Functionalities is not working. Customer business workflow is broken. THey cannot proceed further.
+				- Ex1: Fund transfer is not working in net banking.
+				- Ex2: Ordering product in ecommerce application is not working.
+
+			3) Major: It cause some undesirable behaviour, but the feature/application is still functional.
+				- Ex1: After sending email there is no confirm message.
+				- Ex2: After booking cab there is no confirmation.
+
+			4) Minor: It won't cause any major break-down of the system.
+				- Ex: Look and feel issues, spellings, alignments.
+
+--- 40) What is Priority? ---
+
+	- Priority describes the importance of defect.
+	- Defect Priority states the order in which a defect should be fixed.
+	- Defect priority can be categorized into three class:
+		
+		a) PO(High): The defect must be resolved imediately as it affects the system severely and cannot be used until it fixed.
+		b) P1(Medium): It can wait until a new version/builds is created.
+		c) P2(Low): Developer can fix it in later releases.
+
+	- Links: https://ibb.co/qJ4j6xn
+
+	- Ex:
+		. "Low Priority - Low Severity": A spelling mistake in a page not frequently navigated by users.
+		. "Low Priority" - *High Severity*: Application crashing in some very coner case.
+		. *High Priority* - "Low Severity": Slight change in logo color or spelling mistake in Company Name.
+		. *High Priority* - *High Severity*: Issue with login Functionality. (User is not able to login to the application).
+		. *High Severity* - "Low Priority": Web page not found when user clicks on a link (user does not visit that page generally).
+		. "Low Priority - Low Severity": Any cosmetic or spelling issues which is within a paragraph or in the page.
+
+--- 41) What is Defect Resolution? ---
+
+	- After receiving the defect report from the testing team, development team conduct a review meeting to fix defecta. THey they send a Resolution Type to the testing team for further communication.
+
+	- Resolution Types
+		. Accept
+		. Reject
+		. Dublicate
+		. Enhacement
+		. Need more information
+		. Not Reproducible
+		. Fixed
+		. As Designed
+
+--- 42) What is Life Cycle? ---
+
+	- Links: https://ibb.co/4TCbB86
+
+---	43) What is Test Cycle Closure? ---
+
+	- Activities:
+
+		. Evaluate cycle completion criteria based on Time, Test Coverage, Cost, Software, Critical Business objectives, Quality.
+		. Prepare test metrics based on above parameters.
+		. Document the learning out of the project.
+		. Prepare Test Summary report.
+		. Qualitative and Quntitative reporting of quality of the work product to the customer.
+		. Test result Analysis to find out the defect distribution by type and severity.
+
+	- Deliverables:
+
+		. Test Closure Report
+		. Test Metrics
+			- Link: https://ibb.co/4TCbB86
+
+--- 44) What is QA/Testing Activities? ---
+
+	- Understanding the requirements and functional specifictions of the application.
+	- identifying required Test Scenario's.
+	- Designing Test Cases to validate application.
+	- Setting up Test Environment(Test Bed).
+	- Execute Tesr Cases to valid application.
+	- Log Test results (How many test cases pass/fail).
+	- Defect reporting and Tracking
+	- Retest fixed defects of previous build.
+	- Perform various types of testing's in application.
+	- Reports to Test Lead about the status of assigned tasks.
+	- Participated in reqular team meetings.
+	- Creating automation Scripts.
+	- Provides resommendation on whether or not the application/system is ready for production.
+
+--- 45) What are the Principles of Software Testing? ---
+
+	1) Start software testing at early stages. Means from the beginning when you get the requirements.
+	2) Test the software in order to find defects.
+	3) Highly impossible to give the bug free software to the customer.
+	4) Should not do Exhaustive Testing. Means we should not use same type of data for testing every time.
+	5) Testing is context based. Means decide what types of testing should be conducted based on type of application.
+	6) We should follow the concept of Pesticide Paradox. Means, if you are executing same cases for longer run, they won't be find any defects. We have to keep update test cases in every cycle/relase in order to find more defects.
+	7) We should follow defect clustering. Means some of the modules contains most of the defects. By experience, we can identify such risky modules. %80 of the problems are found in 20% of the modules.
+
+-----------------------------------------------------------
+    b) Module 2: Testing Project(Practical) 
+-----------------------------------------------------------
+
+--- 1) Project Introduction ---
+	
+	- Understanding & Explore the Functionality (FRS)
+	- Estimation
+	- Test Plan
+	- Writing Test Scenarios
+	- Writing Test Cases & Reviews
+	- Environment Setup & Build Deployment
+	- Test Execution
+	- Bug Reporting & Tracking
+	- Sanity Testing, Re-Testing & Regression Testing.
+	- Test Sign Off
+
+	- ecommerce:
+			. Login
+			. Search for products/items
+			. Add them to cart
+			. Do payment
+			. Product will be Delivered
+			. Return the product
+			. etc
+		- Frontend - Public
+		- Backend - Admins
+
+	URL: demo.opencart.com
+
+	- Customer: OpenCart
+
+--- 2) Test Plan Document ---
+
+--- 3) Test Scenarios ---
+
+	- Links: https://ibb.co/tzdJ8CS
+
+--- 4) Test Cases ---
+
+--- 5) RTM ---
+
+--- 6) Environment Setup ---
+
+--- 7) Tex Execution ---
+
+--- 8) Bug Reporting? ---
+
+--- 9) Sanity Testing, Re-Testing & Regression Testing ---
+
+--- 10) Test Sign Off ---
+
+
+-----------------------------------------------------------
+    c) Module 3: Agile Testing + Jira Tool
+-----------------------------------------------------------
+
+--- 1) What is Agile? ---
+
+	- Agile model, Agile Methodology, Agile Process
+
+	- It is an *Iterative* and *Incremental* Approach
+	- Agile is an *Iterative* and *Incremental* Process
+
+	# Agile Principles #
+
+		1) Customer no need to wait for long time
+		2) We develop, test and release piece of software to the cutomer with few number of features.
+		3) We can accept/accomodate required changes.
+	
+	There will be good communication between Customer, Business Analyst, Developers & Testers
+
+	# Advantages of Agile #
+
+		1) Requirement changes are allowed in any stage of development (or) We can accomodate Requirement changes in the middle of development.
+		2) Relases will be fast (Weekly)
+		3) Customer no need to wait for long time
+		4) Good communication between team.
+		5) It is very easy model to adopt.
+
+	# Disadvantages of Agile #
+
+		1) Less focus on design and documentation since we deliver software very faster.
+
+--- 2) What is Scrum? --- 
+
+	- Link1: https://ibb.co/fxKtTfy
+	- Link2: https://ibb.co/5YYT0Hc
+	- Link3: https://ibb.co/hydpXjF
+
+
+	- Scrum is a framework through which we build product by following Agile Principles.
+	- Scrum includes group of poeple called as Scrum Team. Normally contains 5-9 members:
+
+		1) Product Owner
+		2) Scrum Master
+		3) Dev Team
+		4) QA Team
+	
+	1) Product Owner:
+		- Define the features of the Product.
+		- Prioritize features according to market value.
+		- Adjust features and priority every iteration, as needed.
+		- Accept or reject work results.
+
+	2) Scrum Master:
+		- The main role is facilitating and driing the agile process.
+
+	3) Developers and Testers
+		- Develop and test the Project
+
+---	3) What is User Story? ---
+
+	- A feature/module in a software.
+
+--- 4) What is Epic? ---
+
+	- Collection of user stories is Epic.
+
+--- 5) What is Product Backlog? ---
+
+	- Contains list of user stories. Prepared by Product Owner.
+
+--- 6) What is Sprint/Iteration? ---
+	
+	- Period of time to complete the user stories, decided by the product owner and team, usually 2-4 weeks of time.
+
+--- 7) What us Sprint Planning Meeting? ---
+
+	- It is meeting conducts with the team to define what can be delivered in the sprint and duration.
+
+--- 8) What is Sprint Backlog? ---
+
+	- List of committed stories by Dev/QA for specific sprint.
+
+--- 9) What is Scrum Meeting/Standup Meeting? ---
+	
+	- Meeting conducted by Scrum Master everyday for 15mins. Called as scrum call/standup meeting.
+		- What did you yesterday?
+		- What will you do today?
+		- Are there any impediments/blockers in your way?
+
+--- 10) What is Sprint Demo/ Sprint Review? ---
+
+	- Provide Demo to Product Owner and Customer.		
+
+--- 11) What is Sprint Retrespective Meeting? ---
+
+	- Conducts after completion of sprint. The entire team, including both the Scrum Master	and the product owner should participate.
+
+--- 12) What is Story Point? ---
+
+	- Rough estimation of user stories, will be given by Dev & QA in the form of Fibonacci Series.
+	- 0, 1, 1, 2, 3, 5, 8	
+
+--- 13) What is Burndown Chart? ---
+
+	- Shows how much work remaining in the sprint. 
+	- Maintained by the Scrum Master Daily.
+
+--- 14) What is Definition of Ready (DoR) and Definition of Done (DoD? ---
+
+	- Link: https://ibb.co/28F7n00
+
+	- Definition of Ready (DoR)
+		. User Story is clear.
+		. User Story is testable
+		. User Story is feasible
+		. User Story is defined
+		. User Story is Acceptance Criteria defoned
+		. User Story dependencies identified
+		. User Story sized By Development Team.
+		. Scrum Team accepts User Experience Artifacts.
+		. Performance criteria identified where appropriate
+		. Team has a good idea what it will mean to Demo the User Story
+
+	- Definition of Done (DoD)
+		. Code produced (all 'to do' items in code completed)	
+		. Code commented, checked in and run against current version in source control.
+		. Peer reviewed (or produced with pair programming) and meeting development stndarts.
+		. Builds without errors.
+		. Deployed to system test environment and passed system tests.
+		. Passed UAT (User Acceptance Testing) and signed off as meeting requirements.
+		. Any build/deployment/configuration changes are implemented/documented/communicated.
+		. Relevant documentation/diagrams produced and/or updated.
+		. Remaining hours for task set to zero and task closed.
+
+--- 15) What is Jira? ---
+
+	- Test Management Tools
+	- Bug Tracking Tools
+
+	- Agile Tools
+		. Jira, VerionOne, TeamCity....
+		. Jira ---> Agile Management Tool
+
+	Backlog --> Epic --> Stories 
+	
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

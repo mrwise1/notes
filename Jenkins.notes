@@ -1,0 +1,95 @@
+-----------------------------------------------------------
+Jenkins CI/CD
+-----------------------------------------------------------
+
+--- 1) What is Pipeline? ---
+
+	- In Jenkins, a Pipeline is a group of events or jobs which are interlinked with one another in a sequence.
+
+	- In Jenkins PipleLine Process has 4 stages:
+		1) Build
+		2) Deploy
+		3) Test
+		4) Relase
+
+	- Link: https://ibb.co/XCrX44G
+
+--- 2) How to setup BUILD PIPELINE in Jenkins? ---
+
+	1) Step1: Chain required jobs in sequence Add upstream/downstream jobs
+	2) Step2: Install Build Pipeline Plugin
+	3) Step3: Add
+			  Build Pipeline View
+			  Configure the view Step
+	4) Step4: Run and Validate		  
+
+		
+--- 3) How we can Create Jenkins Pipeline Using Groovy Script? ---
+
+	- 2 ways:
+
+		a) Scripted Pipeline
+		b) Declarative Pipeline
+
+--- 4) Pipeline Concepts ---
+
+	1) Pipeline:
+
+		- A Pipeline is a user-defined model of a CD Pipeline. A Pipeline's code defines your entire build process, which typically includes stages for building an application, testing it and then delivering it.
+		- Also a "Pipeline" block is a key part of Declarative Pipeline syntax.
+
+	2) Node:
+		
+		- A node is a machine which is part of the Jenkins environment and is capable of executing a Pipeline.
+		- Also, a "node" block is a key part of Scripted PipleLine syntax.
+
+	3) Stage:
+
+		- A Stage block defines a conceptually distinct subset of tasks performed through the entire Pipeline (eg. "Build", "Test" and "Deploy" stages), which is used by many plugins to visualize or present Jenkins Pipeline status/progress.
+
+	4) Step:
+
+		- A single task. 
+		- Fundamentally, a step tells Jenkins what to do at a particular point in time ( or "step" in the process).
+		- For example, to execute the shell command make use the sh step: sh "make".
+		- When a plugin extends the Pipeline DSL, that typically means the plugin has implementeda new step.
+
+--- 5) What is Scripted Pipeline? ---
+
+--- 6) What is Declarative Pipeline? ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+-----------------------------------------------------------
+    Apache Maven 
+-----------------------------------------------------------
+
+--- 1) What is Maven? ---
+
+
+	- Build automation tool
+	- Easy to manage dependencies
+	- Jar files of 3rd part libraries.
+	- Project Structue
+	- pom.xml 
+		. Dependencies
+		. Plugins
+	- Reports and Documentation
+
+
+--- 2) How Maven Project Works? ---
+
+	- pom.xml 
+		. Dependencies: Responsible for downloading 3rd party libraries/jar files
+		. plugin: configurations 	
+
+	- Remote Maven Repository --> Local Maven Repository
+
+--- 3) What Maven Build LifeCycle? ---
+
+	- ResourceBundle rb = ResourceBundle.getBundle("config") --> to read from configuration.properties 
+
+	1) Validate
+	2) Compile
+	3) Test
+	4) Package
+	5) Integration Test
+	6) Verify
+	7) Install - Install in local Repository
+	8) Deploy - Install in remote rep's to use by other projects
+
+
+	- Clean clean target folders
+
+--- 4) WHat Maven SureFire Plugin? ---
+
+	- Maven SureFire Plugin enables to run test cases with pom xml
+
+--- 5) Maven Commands? ---
+
+	
