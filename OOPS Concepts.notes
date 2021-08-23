@@ -1,0 +1,278 @@
+-----------------------------------------------------------
+    Java Notes
+-----------------------------------------------------------
+
+
+	-----------------------------------------------------------
+	    OOP Concepts
+	-----------------------------------------------------------
+	
+----	
+
+--- 1) What is class? ---
+	- A class is a collection of variables and methods.
+
+--- 2) What is object? ---
+	- An object is an instance of class (physical)
+
+--- 3) What is Method? ---
+	- A Methods is a piece of code which will perform certain task.
+	- Methods should be part of a class.
+
+--- 4) How many ways we can initialize the values to class variables
+	1) Using object (direectly)
+	2) Using constructor
+	3) Using Method
+
+	- Constructor is a kind of method, but the constructor name should jave same name as class.
+
+	- Methods:
+		a) A method may not take parameters
+		b) A method take parameters
+		c) A method returns some values
+		d) A method may not return any value;
+
+
+	-----------------------------------------------------------
+	    Statis KeyWord
+	-----------------------------------------------------------
+	
+--- 5) What is Static in Java? ---	
+
+	1) Static variables and methods are shared across all the objects.
+	2) Static variables and methods can directly access through class name.
+
+  1) Static methods can access only Static Stuff. (DIRECT)
+  2) Static Methods can also access non Static Stuff but through object.
+  3) Non Statis methods can access everthing ( static and non static - direct access)
+
+--- WHat is System.out.println()? ---
+
+			System.out.println();
+
+			println -- method
+
+		//code
+		class System{
+
+			static PrintStream out;
+
+
+
+---What is JDK? ---  
+
+	- Java Developnebt KIT (JRE & JVM) used for developing java applications/softwares
+
+
+--- What is JRE? ---
+
+	- JRE - Java Run Time Environment(JVM)
+	- It provides environmnet to run/install java based applications
+
+--- What is JVM? ---
+
+	- Java Run TIme Machine
+	- Responsible for executing java programs.
+
+--- What is public static void main(Sytem[] args)? ---
+
+	- JVM is always search for main method to execute program.
+
+
+	-----------------------------------------------------------
+	    Method Overloading
+	-----------------------------------------------------------
+
+--- What is Method Overloading? ---
+
+	- If a class contains more than one method same name it is method Overloading		
+	- Same Method, Same constructor many times
+
+--- What is Constructor Overloading? ---
+
+	- A class contains more than one constructor (all constructors are default same name as Class name) is called constructor Overloading.
+	
+--- What are the rules of Overloading? ---
+
+	1) Number of parameters should be different.
+	2) Order of parameters
+	3) Data type of parameters
+
+	-----------------------------------------------------------
+	    Constructor
+	-----------------------------------------------------------
+
+--- What is Constructor? ---
+
+	1) Constructor is a special kind of method
+	2) Constructor name should be same as class name
+	3) Constructor will not return any value
+	4) Constructor will be invoked at the time of object creation. (We no need to call the constructor explucitly)
+	5) Constructor will take the parameters(just like a metho])
+	6) Constructor is used for initializing the values.
+
+	- There is 2 types of constructor
+
+		a) defaul constructor
+		b) parameterized constructor
+
+	-----------------------------------------------------------
+		Inheritance
+	-----------------------------------------------------------
+				
+	- Aquiring methods and variables from parent class to child class is called as Inheritance
+
+	[java]
+	class A { --> Parent Class/Super Class/Base Class
+
+	}
+
+	class B extends A {  --> child class/sub class/ derived class
+
+	}
+
+	[/java]
+
+	- 3 types of Inheritance 
+
+		a) Single Level 
+				
+				A --> B (extends)
+
+		b) Multi Level	
+				
+				A --> B --> C (extends)
+
+		c) Multiple Inheritance
+
+				A
+					--> C (Interface)
+				B	
+
+		d) Hieracky Inheritance
+				
+					B
+				A  				
+					C
+
+	-----------------------------------------------------------
+   		 Method Overriding
+	-----------------------------------------------------------
+
+	- Re-define the same method from parent class into child class.
+
+	# Method Overloading       vs     Method OverRiding
+
+	*No Inheritance Required*        *At least we should have 2 classess (1 parent 1 is child)
+	*Definition should not be same*  *Definition Should be Same. But Body Can be Changed*
+
+
+	-----------------------------------------------------------
+	    Final 
+	-----------------------------------------------------------
+	
+
+	- Final --> Variable, Method, Class
+		. final int a=10; --> the value of the variable is constant ( we cannot change)
+		. final void m1() -->method we cannot override in the child class
+		. final class Test{ --> class cannot be extended
+
+		}
+
+	-----------------------------------------------------------
+	    Interface
+	-----------------------------------------------------------
+	
+--- What is Interface? ---
+
+	- Interface contains final & static Variables, abstract Methods
+	1) Blue print of class
+
+	[java]
+
+	Interface Testint{
+		// variables
+		// methods
+
+	}
+
+	[/java]	
+
+	2) Interface contains only static and final variables (by default)
+	3) In Interface by default methods are public
+	4) In Interface methods are by default are abstract
+		
+	# abstract: a methods have only definition but not implementation. (no Body)
+
+	5) We cannot instantiate Interface
+		Testint int = new Testint(); --> Not Valid
+		Testint int = new TestClass() --> Valid
+		
+	
+	-----------------------------------------------------------
+	    Packages
+	-----------------------------------------------------------
+	
+	- 2 types of Packages
+
+		1) User Defined
+		2) Build in Packages
+
+	
+	-----------------------------------------------------------
+	    Access Modifiers
+	-----------------------------------------------------------
+	
+		. private --> only within the Class
+		. default --> if you do not specify anything it will be default. Accesible only within the package
+		. protected --> accessible within the package and outside of the package but through Inheritance.
+		. public --> can be accessible everywhere (within the class, within package, outside of the package)
+
+
+	-----------------------------------------------------------
+	    Exception Handling
+	-----------------------------------------------------------
+	
+	- Exception is an event which will terminate the program unexpededly
+
+	- 2 types of Exception	
+
+		1) Checked Exception - Exceptions which are identified by the java compiler
+	
+			- Ex: IOException, FileNoutFOundException
+
+		2) Un-Checked Exception - Exceptions which are not identintified by the Java compiler
+		
+			- Ex: ArithmeticException, NullPointerException, NumberFormatException, ArrayIndexOutOfBoundException
+
+	try {
+
+		} catch {
+
+			} finally {
+
+			}
+	
+
+	a) Exception occurs, catch block handles, finally block also execute
+	b) Exception occurs, catch block not handles, finally block also execute
+	c) Exception not occurs, catch block will ignore, finally block execute
+
+	- try catch block can handle both Checked and Un-Checked Exceptions
+	- Throws can handle only Checked exceptions. you have to place at method level 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

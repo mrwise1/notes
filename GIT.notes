@@ -1,0 +1,144 @@
+-----------------------------------------------------------
+    GIT - Version Control
+-----------------------------------------------------------
+
+
+--- 1) What is Git? ---
+
+	- It is a distributed version system
+
+	- Therea are 4 parts:
+		1) Working Directroy (UnTracked Files) -> add 
+			2) Staging/Index (Tracked Files) -> commit
+				3) Git Local Repository (Commited Files) -> push
+					4) Remote Repository (Remote Files) -> pull/clonne
+
+
+--- 2) What are basic git Commands? ---
+
+	- git init --> initialize a Repository in the file
+	- git status
+	- git add . 
+	- git config --global user.email "youremail"
+	- git config --global user.name "username"
+	- git commit -m "This is my First Commit"
+	- git log --> show all the commit log
+	
+--- 3) What is git diff command? ---
+	- git diff filename
+		. Working dir --> staging --> local repo --> remote repo
+		. Compering files in Version Control System
+
+	Ex:		
+	    diff --git a/index.txt b/index.txt
+		index fcb5845..b5bf6bc 100644
+			- fcb5845: Hash of file content from source/staging
+			- b5bf6bc: Hash of file content from destination/workplace
+			- 100644: Git file mode
+				. 100: represents type of file
+				. 644: File permission rw-r-r
+					. 4 -r
+					. 2 -w
+					. 1 -e
+
+		--- a/index.txt  : source file missing 
+		+++ b/index.txt : New lines added in the working Directroy
+
+	!Last commit represented as HEAD
+	
+	- git diff HEAD filename	
+	- git diff --staged HEAD filename
+	- git log --oneline
+	- git diff --staged 
+	- git diff master test --> It shows all differences between master branch and test branch
+	- git diff master origin/master
+			master: represent local Repository
+			origin: represent remote Repository
+			/master: master branch in the remote Repository
+
+--- 4) What is Git rm commnad? ---
+
+	- It is used to delete file/files
+
+	- git ls-files --> shows all files in the staging area
+	- git rm file1.txt --> it will remove spedicic file
+	- git rm -r. --> remove all files
+	- git rm --cached filename --> delete file from staging area not working are
+	- rm filename --> remove file only from working directory (Linux Command)
+
+--- 5) What is git checkout command?---
+	
+	- We can use checkout commond to discard unstaged changes in the tracked files of working directory.
+
+		1) Only for working directory
+		2) To discard unstaged changes (THe changes which are not added to staging area)
+		3) In the tracked files (the files which are already added to staging area/commit)
+
+--- 6) What is git reset Commond? ---
+
+	1) to remove changes from staging area
+	2) to undo changes at Repository level
+
+	- git reset <mode> commitId
+		. Moves HEAD to the specified commit, and all remaining recent commits will be removed.
+		. Mode: will decide wheteher these changes are going to remove from staging are and working directory or not
+
+			- Mixed: it is the default mode.
+				. TO discard commits in the local Repository and to discard changes in staging area.
+				. It will not touch working directory.
+
+
+			- Soft: it is exactly same as --mixed option, but changes are available in working directory as well as in staging area.
+					. It wont touch staging area and working directory.
+					. As changes already present in staging area just we have to use commit to revert back
+			
+			- Hard: Changes will be discarded everywhere
+					. Working tree wont be clean
+					. No way to revert
+
+--- 7) What is Branching? ---
+
+	- Master is a main branch
+	- git branch --> to view available braches
+	- git checkout --> discard unstaged changes in working directory.
+
+	- git checkout branch_name --> swiching to the branch name
+	- git checkout -b branch_name --> creating a new brach and swiching to that branch 
+
+
+--- 8) What is Merging? ---
+
+	- 2 types of Merging
+		
+		1) Fast-Forward Merge: we have not added new files/changes to master branch. We do changes on branch. There is no change to get conflict.
+			-git merge feature
+
+		2) There-Way Commit: recursive strategy
+			-git merge branch_name
+
+--- 9) How to resolve Merge Conflicts? ---
+
+	- Solve manually
+	- git branch -d branchName = After meger delete
+	- git branch -D brancName = Delete without merge
+	- git branch -graph 
+
+--- 10) What is Git Rebase? ---	
+
+--- 11) What is Github? ---
+
+	- Github is a hosting service for git Repository
+	- Git is the tool, while github is the service to use git.
+
+	
+
+
+
+
+
+
+
+
+
+
+
