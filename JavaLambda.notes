@@ -1,0 +1,79 @@
+-----------------------------------------------------------
+    Java Lambda Expressions
+-----------------------------------------------------------
+
+	- Objectives of Functional Programming
+
+		1) Functional Programming Features
+		2) Code Optimization
+	
+
+--- What is Lambda Expression? ---
+
+	- Lambda Expressions are ananymous FUnctions
+
+		1) No Name
+		2) No return type
+		3) No access Type	 
+
+	n -> { return n * n; };
+
+
+--- What is Functional Interface? ---
+
+	- It should contains only one Single Abstract Method	(SAM)
+	- It can contains Default methods and static methods 
+
+--- What are the functional Interfaces in Java? ---
+
+	- Runnable --> run()
+	- Callable --> call ()
+	- Comparable --> compereTo()
+	- ActionListener --> actionPerformed()
+
+	! Invoke to Lambda Expressions we have to create FUnctional Interface
+
+
+--- What is Pre-Defined Functional Interfaces? ---
+
+	1) Predicate
+	2) Function
+	3) Consumer
+	4) Supplier
+
+	- inside of java.util.function
+
+--- What is Predicate FUnctional Interface? ---
+
+	- interface Predicate (T){
+
+		public abstract boolean test() --> Takes only 1 argument.
+
+	}
+
+	- If we have a conditional check we can use predicate.
+
+
+--- What is Function Functional Interface? ---
+
+	- interface Function <T, R>
+		{
+			public R apply(T)
+		} 
+
+	- it will return an output
+	
+
+	- Ex:
+				 input 		output
+	     Function<Integer, Integer> f = n -> n * n;
+
+	    System.out.println( f.apply(5)); // 25
+
+--- What Consumer Functional Interface? ---
+	
+--- What is Supplier Functional Interface? ---
+
+	
+
+
