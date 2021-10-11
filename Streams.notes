@@ -1,0 +1,93 @@
+-----------------------------------------------------------
+    Streams Java
+-----------------------------------------------------------
+
+--- 1) What is Collection? ---
+	- Collection: To represent group of data/objects as single entity
+
+--- 2) What is Stream? ---
+
+	- Stream: To process the data from Collection we use Streams Concepts
+
+	- It comes from java.util.* package. It used with Collections.
+	- Java.io.Streams is different. It used with files
+
+	- There are 2 mechanism to process data in the Collections.
+
+		1) Filter
+		2) Map
+
+	
+--- 3) How can we use Filter? ---
+
+	- Used to process data in the Collections
+
+	[java]
+		//code
+		/*
+		ArrayList<Integer> numbersList = new ArrayList<Integer>();
+
+		numbersList.add(10);
+		numbersList.add(15);
+		numbersList.add(20);
+		numbersList.add(25);
+		numbersList.add(30);
+
+		*/
+		List<Integer> numberList = Arrays.asList(10,15,20,25,30);
+
+		List <Integer> evenNumbersList = new ArrayList();
+
+		// Without using Streams
+
+		/*
+		for(int n: numbersList){
+
+
+			if(n%2 == 0)
+				evenNumbersList.add(n);
+		}
+
+		System.out.println(evenNumbersList);
+
+		*/
+		// With Streams
+
+		/*evenNumbersList = numbersList.stream.filter(n -> n%2==0 ).collect(Collecters.toList());
+		System.out.println(evenNumbersList);
+		*/
+
+		numbersList.stream().filter( n -> n % 2 == 0 ).forEach( n -> System.out.println(););
+
+		numbersList.stream().filter( n -> n % 2 == 0 ).forEach(;
+
+
+
+		[\java]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
